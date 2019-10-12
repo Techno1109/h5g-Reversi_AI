@@ -1,0 +1,52 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buildprogram.gen", "Library\DotsRuntimeBuild\buildprogram.gen.csproj", "{B56CB90E-0B32-3DC5-8448-7006AD13E62B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reversi_AI.gen", "Assets\Reversi_AI\Reversi_AI.gen.csproj", "{3FEB0657-FD17-3407-28E6-E113A69FAE2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Entities.BuildUtilities", "Library\DotsRuntimeBuild\Unity.Entities.BuildUtilities.csproj", "{42529BFE-C7DC-1D63-1B6F-8F64D2B3E8E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeRegGen", "Library\DotsRuntimeBuild\TypeRegGen.csproj", "{CDAF4BA9-0F68-B1DD-A38E-0A06EDFD78AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindGem", "Library\DotsRuntimeBuild\BindGem.csproj", "{7393908E-3929-C1B7-DBE0-F02C66F8F7A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TinyCorlib", "Library\DotsRuntimeBuild\Unity.TinyCorlib.csproj", "{95BE9475-7513-1D77-602F-DE1C691BFC25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{1D1C93E8-7F82-D831-5960-082115244F13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unity", "Unity", "{1B6D86D0-12CB-792C-3DA5-CF5BFEE3205F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		windows-dotnet-develop|Default = windows-dotnet-develop|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B56CB90E-0B32-3DC5-8448-7006AD13E62B}.windows-dotnet-develop|Default.ActiveCfg = Release|Any CPU
+		{3FEB0657-FD17-3407-28E6-E113A69FAE2B}.windows-dotnet-develop|Default.ActiveCfg = windows-dotnet-develop|Any CPU
+		{3FEB0657-FD17-3407-28E6-E113A69FAE2B}.windows-dotnet-develop|Default.Build.0 = windows-dotnet-develop|Any CPU
+		{42529BFE-C7DC-1D63-1B6F-8F64D2B3E8E5}.windows-dotnet-develop|Default.ActiveCfg = Release|Any CPU
+		{42529BFE-C7DC-1D63-1B6F-8F64D2B3E8E5}.windows-dotnet-develop|Default.Build.0 = Release|Any CPU
+		{CDAF4BA9-0F68-B1DD-A38E-0A06EDFD78AB}.windows-dotnet-develop|Default.ActiveCfg = Release|Any CPU
+		{CDAF4BA9-0F68-B1DD-A38E-0A06EDFD78AB}.windows-dotnet-develop|Default.Build.0 = Release|Any CPU
+		{7393908E-3929-C1B7-DBE0-F02C66F8F7A8}.windows-dotnet-develop|Default.ActiveCfg = Release|Any CPU
+		{7393908E-3929-C1B7-DBE0-F02C66F8F7A8}.windows-dotnet-develop|Default.Build.0 = Release|Any CPU
+		{95BE9475-7513-1D77-602F-DE1C691BFC25}.windows-dotnet-develop|Default.ActiveCfg = windows-dotnet-develop|Any CPU
+		{95BE9475-7513-1D77-602F-DE1C691BFC25}.windows-dotnet-develop|Default.Build.0 = windows-dotnet-develop|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B56CB90E-0B32-3DC5-8448-7006AD13E62B} = {1D1C93E8-7F82-D831-5960-082115244F13}
+		{42529BFE-C7DC-1D63-1B6F-8F64D2B3E8E5} = {1D1C93E8-7F82-D831-5960-082115244F13}
+		{CDAF4BA9-0F68-B1DD-A38E-0A06EDFD78AB} = {1D1C93E8-7F82-D831-5960-082115244F13}
+		{7393908E-3929-C1B7-DBE0-F02C66F8F7A8} = {1D1C93E8-7F82-D831-5960-082115244F13}
+		{95BE9475-7513-1D77-602F-DE1C691BFC25} = {1B6D86D0-12CB-792C-3DA5-CF5BFEE3205F}
+		{1D1C93E8-7F82-D831-5960-082115244F13} = {1B6D86D0-12CB-792C-3DA5-CF5BFEE3205F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBFE8D05-8586-4A00-BBEE-CFB08FD07446}
+	EndGlobalSection
+EndGlobal
