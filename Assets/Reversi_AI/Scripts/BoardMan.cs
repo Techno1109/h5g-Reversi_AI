@@ -318,7 +318,6 @@ public class BoardMan : ComponentSystem
         CheckReverseState(SetPos, new int2(-1, -1), SetState, 0, ref Entities);
     }
 
-
     //指定ベクトル方向に挟めているのかチェックする
     public bool CheckPinch(int2 CheckPos,int2 CheckVector,int BaseState , int Count,ref NativeArray<Entity> Entities)
     {
