@@ -97,7 +97,8 @@
             "GridNum": {
                 "x": 5,
                 "y": 3
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 43
@@ -234,7 +235,8 @@
             "GridNum": {
                 "x": 7,
                 "y": 6
-            }
+            },
+            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 62
@@ -370,7 +372,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "y": 3
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 3
@@ -507,7 +510,8 @@
             "GridNum": {
                 "x": 3,
                 "y": 2
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 26
@@ -644,7 +648,8 @@
             "GridNum": {
                 "x": 6,
                 "y": 2
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 50
@@ -916,7 +921,8 @@
             "GridNum": {
                 "x": 7,
                 "y": 1
-            }
+            },
+            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 57
@@ -1052,7 +1058,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "y": 7
-            }
+            },
+            "Priority": 30
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 7
@@ -1189,7 +1196,8 @@
             "GridNum": {
                 "x": 2,
                 "y": 3
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 19
@@ -1326,7 +1334,8 @@
             "GridNum": {
                 "x": 4,
                 "y": 2
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 34
@@ -1463,7 +1472,8 @@
             "GridNum": {
                 "x": 4,
                 "y": 1
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 33
@@ -1600,7 +1610,8 @@
             "GridNum": {
                 "x": 4,
                 "y": 6
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 38
@@ -1737,7 +1748,8 @@
             "GridNum": {
                 "x": 3,
                 "y": 1
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 25
@@ -1926,7 +1938,8 @@
             "GridNum": {
                 "x": 1,
                 "y": 6
-            }
+            },
+            "Priority": -15
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 14
@@ -2139,7 +2152,8 @@
             "GridNum": {
                 "x": 5,
                 "y": 1
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 41
@@ -2276,7 +2290,8 @@
             "GridNum": {
                 "x": 3,
                 "y": 4
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 28
@@ -2790,7 +2805,8 @@
             "GridNum": {
                 "x": 6,
                 "y": 7
-            }
+            },
+            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 55
@@ -2926,7 +2942,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "x": 6
-            }
+            },
+            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 48
@@ -3336,7 +3353,8 @@
             "GridNum": {
                 "x": 2,
                 "y": 4
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 20
@@ -3608,7 +3626,8 @@
             "GridNum": {
                 "x": 4,
                 "y": 4
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 36
@@ -3745,7 +3764,8 @@
             "GridNum": {
                 "x": 6,
                 "y": 1
-            }
+            },
+            "Priority": -15
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 49
@@ -3881,7 +3901,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "y": 6
-            }
+            },
+            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 6
@@ -4018,7 +4039,8 @@
             "GridNum": {
                 "x": 5,
                 "y": 4
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 44
@@ -4288,7 +4310,8 @@
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
             "$type": "GridComp, Reversi_AI",
-            "GridNum": {}
+            "GridNum": {},
+            "Priority": 30
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core"
         }, {
@@ -4558,7 +4581,8 @@
             "GridNum": {
                 "x": 3,
                 "y": 5
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 29
@@ -4969,7 +4993,8 @@
             "GridNum": {
                 "x": 6,
                 "y": 6
-            }
+            },
+            "Priority": -15
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 54
@@ -5230,7 +5255,8 @@
             "GridNum": {
                 "x": 7,
                 "y": 7
-            }
+            },
+            "Priority": 30
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 63
@@ -5367,7 +5393,8 @@
             "GridNum": {
                 "x": 1,
                 "y": 4
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 12
@@ -5504,7 +5531,8 @@
             "GridNum": {
                 "x": 7,
                 "y": 4
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 60
@@ -5777,7 +5805,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "y": 4
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 4
@@ -5914,7 +5943,8 @@
             "GridNum": {
                 "x": 1,
                 "y": 5
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 13
@@ -6549,7 +6579,8 @@
             "GridNum": {
                 "x": 4,
                 "y": 7
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 39
@@ -6686,7 +6717,8 @@
             "GridNum": {
                 "x": 1,
                 "y": 1
-            }
+            },
+            "Priority": -15
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 9
@@ -6823,7 +6855,8 @@
             "GridNum": {
                 "x": 3,
                 "y": 7
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 31
@@ -6960,7 +6993,8 @@
             "GridNum": {
                 "x": 4,
                 "y": 5
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 37
@@ -7097,7 +7131,8 @@
             "GridNum": {
                 "x": 7,
                 "y": 3
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 59
@@ -7234,7 +7269,8 @@
             "GridNum": {
                 "x": 6,
                 "y": 4
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 52
@@ -7497,7 +7533,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "x": 1
-            }
+            },
+            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 8
@@ -7756,7 +7793,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "x": 7
-            }
+            },
+            "Priority": 30
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 56
@@ -8112,7 +8150,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "x": 3
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 24
@@ -8249,7 +8288,8 @@
             "GridNum": {
                 "x": 2,
                 "y": 1
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 17
@@ -8386,7 +8426,8 @@
             "GridNum": {
                 "x": 5,
                 "y": 6
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 46
@@ -8523,7 +8564,8 @@
             "GridNum": {
                 "x": 6,
                 "y": 3
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 51
@@ -8660,7 +8702,8 @@
             "GridNum": {
                 "x": 1,
                 "y": 2
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 10
@@ -8796,7 +8839,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "y": 1
-            }
+            },
+            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 1
@@ -8933,7 +8977,8 @@
             "GridNum": {
                 "x": 6,
                 "y": 5
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 53
@@ -9207,7 +9252,8 @@
             "GridNum": {
                 "x": 4,
                 "y": 3
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 35
@@ -9477,7 +9523,8 @@
             "$type": "GridComp, Reversi_AI",
             "GridNum": {
                 "x": 4
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 32
@@ -9614,7 +9661,8 @@
             "GridNum": {
                 "x": 1,
                 "y": 3
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 11
@@ -9888,7 +9936,8 @@
             "GridNum": {
                 "x": 2,
                 "y": 6
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 22
@@ -10025,7 +10074,8 @@
             "GridNum": {
                 "x": 3,
                 "y": 3
-            }
+            },
+            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 27
@@ -10162,7 +10212,8 @@
             "GridNum": {
                 "x": 3,
                 "y": 6
-            }
+            },
+            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 30
@@ -10425,7 +10476,8 @@
             "GridNum": {
                 "x": 1,
                 "y": 7
-            }
+            },
+            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 15

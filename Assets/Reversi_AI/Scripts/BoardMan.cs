@@ -74,40 +74,57 @@ public class BoardMan : ComponentSystem
         }
 
         //AIのターン中は操作を受け付けません。
-        if(G_State.AIColor==G_State.NowTurn)
+        if(G_State.AIColor!=G_State.NowTurn)
         {
-            return;
-        }
+            //設置するグリッドが確定した際にTrueになります
+            bool PutConfirm = false;
 
-        Entities.With(GridEntity).ForEach((Entity EntityData, ref PointerInteraction GridClickData, ref GridComp GridData) =>
-        {
-            if (GridClickData.clicked == true)
+            //プレイヤー側の入力受付
+            //後日別システムとして独立させます
+            Entities.With(GridEntity).ForEach((Entity EntityData, ref PointerInteraction GridClickData, ref GridComp GridData) =>
             {
-                if (CheckGridData(GridData.GridNum, ref GridDatas))
+                if (PutConfirm==false && GridClickData.clicked == true)
                 {
-                    return;
-                }
 
-
-                if (GridData.GridState == 3)
-                {
-                    SetGridData(GridData.GridNum, G_State.NowTurn, ref GridDatas);
-
-                    Reverse(GridData.GridNum, G_State.NowTurn, ref GridDatas);
-
-                    G_State.NowTurn = G_State.NowTurn == 1 ? 2 : 1;
-
-                    if (!CheckCanPut_AllGrid(ref G_State, ref GridDatas))
+                    if (CheckGridData(GridData.GridNum, ref GridDatas))
                     {
-                        G_State.NowTurn = G_State.NowTurn == 1 ? 2 : 1;
-                        CheckCanPut_AllGrid(ref G_State, ref GridDatas);
+                        return;
                     }
 
-                    SetSingleton<GameState>(G_State);
+
+                    if (GridData.GridState == 3)
+                    {
+                        //設置フラグを立てます
+                        GridData.PutFlag = true;
+                        PutConfirm = true;
+                    }
+                }
+            });
+
+        }
+
+        Entities.With(GridEntity).ForEach((Entity EntityData, ref GridComp GridData) =>
+        {
+            if (GridData.PutFlag == true)
+            {
+                SetGridData(GridData.GridNum, G_State.NowTurn, ref GridDatas);
+
+                Reverse(GridData.GridNum, G_State.NowTurn, ref GridDatas);
+
+                G_State.NowTurn = G_State.NowTurn == 1 ? 2 : 1;
+
+                if (!CheckCanPut_AllGrid(ref G_State, ref GridDatas))
+                {
+                    G_State.NowTurn = G_State.NowTurn == 1 ? 2 : 1;
+                    CheckCanPut_AllGrid(ref G_State, ref GridDatas);
                 }
 
+                //処理終了後にフラグをFalseに変更します
+                GridData.PutFlag = false;
+
+                SetSingleton<GameState>(G_State);
+
                 PawnCounter();
-                return;
             }
         });
 

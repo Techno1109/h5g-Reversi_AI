@@ -10,4 +10,8 @@ public struct GridComp : IComponentData
 
     //このグリッドの評価値を設定します、高ければ高いほど優先して取るべき駒です。
     public int Priority;
+
+    //このグリッドに設置することが確定した場合にTrueになります。
+    //毎フレーム各グリッドのチェック終了後にFalseに変更されます。
+    public bool PutFlag;
 }

@@ -20,8 +20,8 @@ public class AiSystem : ComponentSystem
             this.TotalPriority = totalPriority;
         }
 
-        int2 Pos;
-        int TotalPriority;
+        public int2 Pos;
+        public int TotalPriority;
     }
 
 
@@ -98,9 +98,6 @@ public class AiSystem : ComponentSystem
             {
                 NativeArray<GridComp> GridDatas = new NativeArray<GridComp>(0, Allocator.Temp);
 
-                int Priority = 0;
-
-
                 //現在の盤面を取得
                 GetGirdData(ref GridDatas);
 
@@ -110,20 +107,39 @@ public class AiSystem : ComponentSystem
 
                 PutDatas.Add(new CanPutData(GridData.GridNum, GetTotalPriority(G_State.AIColor, ref GridDatas)));
 
-                //G_State.NowTurn = G_State.NowTurn == 1 ? 2 : 1;
-
-                //if (!CheckCanPut_AllGrid(ref G_State, ref GridDatas))
-                //{
-                //    G_State.NowTurn = G_State.NowTurn == 1 ? 2 : 1;
-                //    CheckCanPut_AllGrid(ref G_State, ref GridDatas);
-                //}
-
                 GridDatas.Dispose();
             }
         });
 
+        //一番評価点が高いDataが格納されます
+        CanPutData TopPriorityData=new CanPutData(new int2(-1, -1),-99999999);
 
-        PutDatas.Dispose();
+        for(int i=0; i<PutDatas.Length;i++)
+        {
+            if(i==0)
+            {
+                TopPriorityData = PutDatas[0];
+                continue;
+            }
+
+
+            if(PutDatas[i].TotalPriority> TopPriorityData.TotalPriority)
+            {
+                TopPriorityData = PutDatas[i];
+            }
+        }
+
+        //一番評価値が高かったデータのグリッドデータと一致する場所に設置フラグを立てます
+        Entities.With(GridEntity).ForEach((ref GridComp GridData) =>
+        {
+            if (GridData.GridNum.x==TopPriorityData.Pos.x&&
+                GridData.GridNum.y==TopPriorityData.Pos.y)
+            {
+                GridData.PutFlag = true;
+            }
+        });
+
+            PutDatas.Dispose();
     }
 
 
