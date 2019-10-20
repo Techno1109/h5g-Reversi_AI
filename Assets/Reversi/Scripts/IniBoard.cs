@@ -36,7 +36,7 @@ public class IniBoard : ComponentSystem
 
     protected override void OnUpdate()
     {
-        if(HasSingleton<BoardState>()==false)
+        if (HasSingleton<BoardState>() == false)
         {
             return;
         }
@@ -44,14 +44,14 @@ public class IniBoard : ComponentSystem
         {
             return;
         }
-        if (! ( (GridEntity.CalculateLength() > 0) ))
+        if (!((GridEntity.CalculateLength() > 0)))
         {
             return;
         }
         var Config = GetSingleton<BoardState>();
         if (GetSingleton<BoardState>().EmitBoard == false)
         {
-           InitBoard();
+            InitBoard();
         }
     }
 

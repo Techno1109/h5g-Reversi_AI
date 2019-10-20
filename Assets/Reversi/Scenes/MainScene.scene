@@ -5,11 +5,11 @@
     "AssetReferences": [
         { "Guid": "98785116002eec84f964dd637125bf96", "FileId": 21300000, "Type": 3},
         { "Guid": "afea7324b8e28754399661af46a2a689", "FileId": 21300000, "Type": 3},
-        { "Guid": "8bab454023a674741b8d6899a4e9f62f", "FileId": 21300000, "Type": 3},
         { "Guid": "2751edb52e39d824884a632ffd1a80c2", "FileId": 21300000, "Type": 3},
+        { "Guid": "8bab454023a674741b8d6899a4e9f62f", "FileId": 21300000, "Type": 3},
         { "Guid": "2acd61d1f33a246048b168400660b2c7", "FileId": 11400000, "Type": 2},
-        { "Guid": "3b349078308c41342b489810c59b12d0", "FileId": 21300000, "Type": 3},
         { "Guid": "b878d5953b950e84fb5f292fe8c7f94b", "FileId": 21300000, "Type": 3},
+        { "Guid": "3b349078308c41342b489810c59b12d0", "FileId": 21300000, "Type": 3},
         { "Guid": "397a206e789cddd40accdd4dcd81c588", "FileId": 21300000, "Type": 3}],
     "Entities": [{
         "Components": [{
@@ -93,13 +93,6 @@
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 5,
-                "y": 3
-            },
-            "Priority": -1
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 43
         }, {
@@ -158,6 +151,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 5,
+                "y": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -207,7 +206,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -230,13 +229,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 7,
-                "y": 6
-            },
-            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 62
@@ -296,6 +288,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 7,
+                "y": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -312,7 +310,7 @@
             }, {
                 "c": "_"
             }, {
-                "c": "6"
+                "c": "5"
             }]
         }, {
             "$type": "Unity.Authoring.Core.ComponentOrder, Unity.Authoring.Core",
@@ -345,7 +343,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -368,12 +366,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "y": 3
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 3
@@ -433,6 +425,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "y": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -482,7 +479,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -505,13 +502,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 3,
-                "y": 2
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 26
@@ -571,6 +561,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 3,
+                "y": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -620,7 +616,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -643,13 +639,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 6,
-                "y": 2
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 50
@@ -709,6 +698,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 6,
+                "y": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -758,7 +753,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -917,13 +912,6 @@
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 7,
-                "y": 1
-            },
-            "Priority": -12
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 57
         }, {
@@ -982,6 +970,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 7,
+                "y": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -1031,7 +1025,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -1054,12 +1048,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "y": 7
-            },
-            "Priority": 30
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 7
@@ -1119,6 +1107,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "y": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -1168,7 +1161,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -1191,13 +1184,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 2,
-                "y": 3
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 19
@@ -1257,6 +1243,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 2,
+                "y": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -1306,7 +1298,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -1329,13 +1321,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 4,
-                "y": 2
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 34
@@ -1395,6 +1380,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 4,
+                "y": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -1444,7 +1435,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -1467,13 +1458,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 4,
-                "y": 1
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 33
@@ -1533,6 +1517,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 4,
+                "y": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -1582,7 +1572,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -1605,13 +1595,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 4,
-                "y": 6
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 38
@@ -1671,6 +1654,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 4,
+                "y": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -1687,7 +1676,7 @@
             }, {
                 "c": "_"
             }, {
-                "c": "6"
+                "c": "5"
             }]
         }, {
             "$type": "Unity.Authoring.Core.ComponentOrder, Unity.Authoring.Core",
@@ -1720,7 +1709,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -1743,13 +1732,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 3,
-                "y": 1
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 25
@@ -1809,6 +1791,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 3,
+                "y": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -1858,22 +1846,23 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
         "Components": [{
-            "$type": "BoardState, Reversi_AI"
-        }, {
-            "$type": "GameState, Reversi_AI",
-            "NowTurn": 1
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 2
         }, {
             "$type": "Unity.Entities.EntityGuid, Unity.Entities",
             "a": 4273962194055220997,
             "b": 9331716702930682574
+        }, {
+            "$type": "BoardState, Reversi"
+        }, {
+            "$type": "GameState, Reversi",
+            "NowTurn": 1,
+            "AIColor": 2
         }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
@@ -1908,9 +1897,7 @@
             }, {
                 "StableTypeHash": 13586331813950817384
             }, {
-                "StableTypeHash": 8445974902412396739
-            }, {
-                "StableTypeHash": 16091362182964660172
+                "StableTypeHash": 6412000132911279819
             }]
         }]
     }, {
@@ -1933,13 +1920,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 1,
-                "y": 6
-            },
-            "Priority": -15
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 14
@@ -1999,6 +1979,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 1,
+                "y": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -2015,7 +2001,7 @@
             }, {
                 "c": "_"
             }, {
-                "c": "6"
+                "c": "5"
             }]
         }, {
             "$type": "Unity.Authoring.Core.ComponentOrder, Unity.Authoring.Core",
@@ -2048,7 +2034,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -2148,13 +2134,6 @@
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 5,
-                "y": 1
-            },
-            "Priority": -3
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 41
         }, {
@@ -2213,6 +2192,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 5,
+                "y": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -2262,7 +2247,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -2285,13 +2270,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 3,
-                "y": 4
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 28
@@ -2351,6 +2329,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 3,
+                "y": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -2400,15 +2384,11 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
         "Components": [{
-            "$type": "TurnTexts, Reversi_AI",
-            "White": "649d453f5eaac18e2c237bede387b803",
-            "Black": "60a37e695c68abc5be9144821c1ffaba"
-        }, {
             "$type": "Unity.Tiny.Core2D.Parent, Unity.Tiny.Core2D",
             "Value": "b5aaebc3df634839bfa864a759b6dab7"
         }, {
@@ -2418,6 +2398,10 @@
                 "a": 1
             },
             "blending": 0
+        }, {
+            "$type": "TurnTexts, Reversi",
+            "White": "649d453f5eaac18e2c237bede387b803",
+            "Black": "60a37e695c68abc5be9144821c1ffaba"
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core"
         }, {
@@ -2527,13 +2511,9 @@
                 "StableTypeHash": 7330883638785690380
             }, {
                 "StableTypeHash": 17417872368199721125
-            }, {
-                "StableTypeHash": 13341139057362587466
-            }, {
-                "StableTypeHash": 7046813665475017995
             }]
         }, {
-            "$type": "NowTurnTag, Reversi_AI"
+            "$type": "NowTurnTag, Reversi"
         }]
     }, {
         "Components": [{
@@ -2632,6 +2612,8 @@
             }, {
                 "StableTypeHash": 4930191836287238302
             }]
+        }, {
+            "$type": "GameEndWindowTag, Reversi"
         }]
     }, {
         "Components": [{
@@ -2774,11 +2756,9 @@
                 "StableTypeHash": 1511947279668656474
             }, {
                 "StableTypeHash": 4162363568366030544
-            }, {
-                "StableTypeHash": 14417001748284020599
             }]
         }, {
-            "$type": "BlackTag, Reversi_AI"
+            "$type": "BlackTag, Reversi"
         }]
     }, {
         "Components": [{
@@ -2800,13 +2780,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 6,
-                "y": 7
-            },
-            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 55
@@ -2866,6 +2839,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 6,
+                "y": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -2915,7 +2894,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -2938,12 +2917,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 6
-            },
-            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 48
@@ -3003,6 +2976,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -3052,7 +3030,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -3075,12 +3053,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 2,
-                "y": 2
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 18
@@ -3140,6 +3112,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 2,
+                "y": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -3189,7 +3167,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -3212,11 +3190,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "y": 5
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 5
@@ -3276,6 +3249,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "y": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -3325,7 +3303,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -3348,13 +3326,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 2,
-                "y": 4
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 20
@@ -3414,6 +3385,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 2,
+                "y": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -3463,7 +3440,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -3622,13 +3599,6 @@
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 4,
-                "y": 4
-            },
-            "Priority": -1
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 36
         }, {
@@ -3687,6 +3657,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 4,
+                "y": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -3736,7 +3712,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -3759,13 +3735,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 6,
-                "y": 1
-            },
-            "Priority": -15
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 49
@@ -3825,6 +3794,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 6,
+                "y": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -3874,7 +3849,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -3897,12 +3872,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "y": 6
-            },
-            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 6
@@ -3962,6 +3931,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "y": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -4011,7 +3985,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -4034,13 +4008,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 5,
-                "y": 4
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 44
@@ -4100,6 +4067,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 5,
+                "y": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -4149,7 +4122,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -4172,11 +4145,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "y": 2
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 2
@@ -4236,6 +4204,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "y": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -4285,7 +4258,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -4308,10 +4281,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {},
-            "Priority": 30
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core"
         }, {
@@ -4370,6 +4339,9 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {}
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -4419,15 +4391,11 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
         "Components": [{
-            "$type": "WinnerTexts, Reversi_AI",
-            "White": "e39bc5415a28e5532a8b152d6f1ad597",
-            "Black": "a93b8fd308cf6f78109673f2d0150472"
-        }, {
             "$type": "Unity.Tiny.Core2D.Parent, Unity.Tiny.Core2D",
             "Value": "568705b9b5754af59657d0d6e866b7da"
         }, {
@@ -4440,6 +4408,10 @@
                 "a": 1
             },
             "blending": 0
+        }, {
+            "$type": "WinnerTexts, Reversi",
+            "White": "e39bc5415a28e5532a8b152d6f1ad597",
+            "Black": "a93b8fd308cf6f78109673f2d0150472"
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 2
@@ -4548,13 +4520,9 @@
                 "StableTypeHash": 18348758817653881529
             }, {
                 "StableTypeHash": 14913384363974273643
-            }, {
-                "StableTypeHash": 12150797066974214054
-            }, {
-                "StableTypeHash": 3146059505512514756
             }]
         }, {
-            "$type": "WinnerTextTag, Reversi_AI"
+            "$type": "WinnerTextTag, Reversi"
         }]
     }, {
         "Components": [{
@@ -4576,13 +4544,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 3,
-                "y": 5
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 29
@@ -4642,6 +4603,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 3,
+                "y": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -4691,7 +4658,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -4714,12 +4681,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 5,
-                "y": 2
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 42
@@ -4779,6 +4740,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 5,
+                "y": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -4828,7 +4795,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -4851,12 +4818,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 5,
-                "y": 5
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 45
@@ -4916,6 +4877,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 5,
+                "y": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -4965,7 +4932,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -4988,13 +4955,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 6,
-                "y": 6
-            },
-            "Priority": -15
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 54
@@ -5054,6 +5014,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 6,
+                "y": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -5070,7 +5036,7 @@
             }, {
                 "c": "_"
             }, {
-                "c": "6"
+                "c": "5"
             }]
         }, {
             "$type": "Unity.Authoring.Core.ComponentOrder, Unity.Authoring.Core",
@@ -5103,7 +5069,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -5251,13 +5217,6 @@
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 7,
-                "y": 7
-            },
-            "Priority": 30
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 63
         }, {
@@ -5316,6 +5275,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 7,
+                "y": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -5365,7 +5330,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -5388,13 +5353,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 1,
-                "y": 4
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 12
@@ -5454,6 +5412,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 1,
+                "y": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -5503,7 +5467,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -5526,13 +5490,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 7,
-                "y": 4
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 60
@@ -5592,6 +5549,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 7,
+                "y": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -5641,7 +5604,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -5664,12 +5627,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 2,
-                "y": 7
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 23
@@ -5729,6 +5686,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 2,
+                "y": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -5778,7 +5741,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -5801,12 +5764,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "y": 4
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 4
@@ -5866,6 +5823,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "y": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -5915,7 +5877,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -5938,13 +5900,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 1,
-                "y": 5
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 13
@@ -6004,6 +5959,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 1,
+                "y": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -6053,7 +6014,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -6076,11 +6037,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 5
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 40
@@ -6140,6 +6096,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -6189,7 +6150,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -6212,12 +6173,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 7,
-                "y": 5
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 61
@@ -6277,6 +6232,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 7,
+                "y": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -6326,7 +6287,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -6349,12 +6310,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 2,
-                "y": 5
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 21
@@ -6414,6 +6369,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 2,
+                "y": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -6463,7 +6424,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -6575,13 +6536,6 @@
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 4,
-                "y": 7
-            },
-            "Priority": -1
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 39
         }, {
@@ -6640,6 +6594,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 4,
+                "y": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -6689,7 +6649,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -6712,13 +6672,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 1,
-                "y": 1
-            },
-            "Priority": -15
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 9
@@ -6778,6 +6731,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 1,
+                "y": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -6827,7 +6786,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -6850,13 +6809,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 3,
-                "y": 7
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 31
@@ -6916,6 +6868,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 3,
+                "y": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -6965,7 +6923,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -6988,13 +6946,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 4,
-                "y": 5
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 37
@@ -7054,6 +7005,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 4,
+                "y": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -7103,7 +7060,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -7126,13 +7083,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 7,
-                "y": 3
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 59
@@ -7192,6 +7142,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 7,
+                "y": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -7241,7 +7197,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -7264,13 +7220,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 6,
-                "y": 4
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 52
@@ -7330,6 +7279,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 6,
+                "y": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -7379,7 +7334,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -7530,12 +7485,6 @@
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 1
-            },
-            "Priority": -12
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 8
         }, {
@@ -7594,6 +7543,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -7643,7 +7597,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -7763,11 +7717,9 @@
                 "StableTypeHash": 147127668789581756
             }, {
                 "StableTypeHash": 11964160820965951619
-            }, {
-                "StableTypeHash": 17992730663586402364
             }]
         }, {
-            "$type": "NowTurnBg, Reversi_AI"
+            "$type": "NowTurnBg, Reversi"
         }]
     }, {
         "Components": [{
@@ -7789,12 +7741,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 7
-            },
-            "Priority": 30
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 56
@@ -7854,6 +7800,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -7903,7 +7854,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -8042,11 +7993,9 @@
                 "StableTypeHash": 1511947279668656474
             }, {
                 "StableTypeHash": 11730879387128816040
-            }, {
-                "StableTypeHash": 18429358662786377935
             }]
         }, {
-            "$type": "WhiteTag, Reversi_AI"
+            "$type": "WhiteTag, Reversi"
         }]
     }, {
         "Components": [{
@@ -8147,12 +8096,6 @@
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
         }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 3
-            },
-            "Priority": -1
-        }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 24
         }, {
@@ -8211,6 +8154,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -8260,7 +8208,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -8283,13 +8231,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 2,
-                "y": 1
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 17
@@ -8349,6 +8290,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 2,
+                "y": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -8398,7 +8345,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -8421,13 +8368,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 5,
-                "y": 6
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 46
@@ -8487,6 +8427,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 5,
+                "y": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -8503,7 +8449,7 @@
             }, {
                 "c": "_"
             }, {
-                "c": "6"
+                "c": "5"
             }]
         }, {
             "$type": "Unity.Authoring.Core.ComponentOrder, Unity.Authoring.Core",
@@ -8536,7 +8482,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -8559,13 +8505,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 6,
-                "y": 3
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 51
@@ -8625,6 +8564,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 6,
+                "y": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -8674,7 +8619,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -8697,13 +8642,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 1,
-                "y": 2
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 10
@@ -8763,6 +8701,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 1,
+                "y": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -8812,7 +8756,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -8835,12 +8779,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "y": 1
-            },
-            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 1
@@ -8900,6 +8838,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "y": 1
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -8949,7 +8892,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -8972,13 +8915,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 6,
-                "y": 5
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 53
@@ -9038,6 +8974,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 6,
+                "y": 5
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -9087,7 +9029,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -9110,12 +9052,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 5,
-                "y": 7
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 47
@@ -9175,6 +9111,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 5,
+                "y": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -9224,7 +9166,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -9247,13 +9189,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 4,
-                "y": 3
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 35
@@ -9313,6 +9248,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 4,
+                "y": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -9362,7 +9303,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -9493,11 +9434,9 @@
                 "StableTypeHash": 147127668789581756
             }, {
                 "StableTypeHash": 4067330699029918291
-            }, {
-                "StableTypeHash": 196736420939883372
             }]
         }, {
-            "$type": "WinnerBgTag, Reversi_AI"
+            "$type": "WinnerBgTag, Reversi"
         }]
     }, {
         "Components": [{
@@ -9519,12 +9458,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 4
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 32
@@ -9584,6 +9517,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 4
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -9633,7 +9571,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -9656,13 +9594,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 1,
-                "y": 3
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 11
@@ -9722,6 +9653,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 1,
+                "y": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -9771,7 +9708,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -9794,12 +9731,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 7,
-                "y": 2
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 58
@@ -9859,6 +9790,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 7,
+                "y": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -9908,7 +9845,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -9931,13 +9868,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 2,
-                "y": 6
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 22
@@ -9997,6 +9927,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 2,
+                "y": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -10013,7 +9949,7 @@
             }, {
                 "c": "_"
             }, {
-                "c": "6"
+                "c": "5"
             }]
         }, {
             "$type": "Unity.Authoring.Core.ComponentOrder, Unity.Authoring.Core",
@@ -10046,7 +9982,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -10069,13 +10005,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 3,
-                "y": 3
-            },
-            "Priority": -1
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 27
@@ -10135,6 +10064,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 3,
+                "y": 3
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -10184,7 +10119,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -10207,13 +10142,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 3,
-                "y": 6
-            },
-            "Priority": -3
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 30
@@ -10273,6 +10201,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 3,
+                "y": 6
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -10289,7 +10223,7 @@
             }, {
                 "c": "_"
             }, {
-                "c": "6"
+                "c": "5"
             }]
         }, {
             "$type": "Unity.Authoring.Core.ComponentOrder, Unity.Authoring.Core",
@@ -10322,7 +10256,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -10445,11 +10379,9 @@
                 "StableTypeHash": 3900708638293176024
             }, {
                 "StableTypeHash": 5378123052767168278
-            }, {
-                "StableTypeHash": 9683198580751159007
             }]
         }, {
-            "$type": "ReplayButton, Reversi_AI"
+            "$type": "ReplayButton, Reversi"
         }]
     }, {
         "Components": [{
@@ -10471,13 +10403,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 1,
-                "y": 7
-            },
-            "Priority": -12
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 15
@@ -10537,6 +10462,12 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 1,
+                "y": 7
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -10586,7 +10517,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }, {
@@ -10609,11 +10540,6 @@
             "blending": 0
         }, {
             "$type": "Unity.Tiny.UIControls.PointerInteraction, Unity.Tiny.UIControls"
-        }, {
-            "$type": "GridComp, Reversi_AI",
-            "GridNum": {
-                "x": 2
-            }
         }, {
             "$type": "Unity.Authoring.Core.SiblingIndex, Unity.Authoring.Core",
             "Index": 16
@@ -10673,6 +10599,11 @@
             },
             "drawMode": 2
         }, {
+            "$type": "GridComp, Reversi",
+            "GridNum": {
+                "x": 2
+            }
+        }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
                 "c": "G"
@@ -10722,7 +10653,7 @@
             }, {
                 "StableTypeHash": 5378123052767168278
             }, {
-                "StableTypeHash": 382133065549717674
+                "StableTypeHash": 13048826005997136781
             }]
         }]
     }]

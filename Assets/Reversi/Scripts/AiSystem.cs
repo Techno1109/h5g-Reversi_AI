@@ -6,24 +6,10 @@ using Unity.Tiny.UILayout;
 using Unity.Tiny.UIControls;
 using Unity.Mathematics;
 
-[UpdateAfter(typeof(BoardMan))]
+[UpdateAfter(typeof(PlayerInput))]
 public class AiSystem : ComponentSystem
 {
     const int BoardSize = 8;
-
-    //評価値と座標を格納するためのStructです。
-    struct CanPutData
-    {
-        public CanPutData(int2 pos, int totalPriority)
-        {
-            this.Pos = pos;
-            this.TotalPriority = totalPriority;
-        }
-
-        public int2 Pos;
-        public int TotalPriority;
-    }
-
 
     EntityQueryDesc GirdEntityDesc;
     EntityQuery GridEntity;
@@ -80,17 +66,14 @@ public class AiSystem : ComponentSystem
         }
 
         //AIのターン中以外はスキップ
-        if (G_State.AIColor != G_State.NowTurn || G_State.AIColor == 0)
+        if (G_State.AIColor != G_State.NowTurn || G_State.IsActive == false)
         {
             return;
         }
 
-        //稼働中のBoardManを取得
-        var BManager = EntityManager.World.GetExistingSystem<BoardMan>();
-
         //ここから先で各盤面の評価値の取得、および判断を書いていきます。
-
-        NativeList<CanPutData> PutDatas = new NativeList<CanPutData>();
+        int2 PutPos = new int2(0, 0);
+        int TopPriorityPoint = -999999;
 
         Entities.With(GridEntity).ForEach((ref GridComp GridData) =>
         {
@@ -105,41 +88,26 @@ public class AiSystem : ComponentSystem
 
                 Reverse(GridData.GridNum, G_State.AIColor, ref GridDatas);
 
-                PutDatas.Add(new CanPutData(GridData.GridNum, GetTotalPriority(G_State.AIColor, ref GridDatas)));
+                int ThisPriority = GetTotalPriority(G_State.AIColor, ref GridDatas);
+                if (ThisPriority> TopPriorityPoint)
+                {
+                    TopPriorityPoint = ThisPriority;
+                    PutPos = GridData.GridNum;
+                }
 
                 GridDatas.Dispose();
             }
         });
 
-        //一番評価点が高いDataが格納されます
-        CanPutData TopPriorityData=new CanPutData(new int2(-1, -1),-99999999);
-
-        for(int i=0; i<PutDatas.Length;i++)
-        {
-            if(i==0)
-            {
-                TopPriorityData = PutDatas[0];
-                continue;
-            }
-
-
-            if(PutDatas[i].TotalPriority> TopPriorityData.TotalPriority)
-            {
-                TopPriorityData = PutDatas[i];
-            }
-        }
-
-        //一番評価値が高かったデータのグリッドデータと一致する場所に設置フラグを立てます
+        ////一番評価値が高かったデータのグリッドデータと一致する場所に設置フラグを立てます
         Entities.With(GridEntity).ForEach((ref GridComp GridData) =>
         {
-            if (GridData.GridNum.x==TopPriorityData.Pos.x&&
-                GridData.GridNum.y==TopPriorityData.Pos.y)
+            if (GridData.GridNum.x == PutPos.x &&
+                GridData.GridNum.y == PutPos.y)
             {
                 GridData.PutFlag = true;
             }
         });
-
-            PutDatas.Dispose();
     }
 
 

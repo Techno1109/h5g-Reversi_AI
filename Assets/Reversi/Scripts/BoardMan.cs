@@ -46,7 +46,7 @@ public class BoardMan : ComponentSystem
         var G_State = GetSingleton<GameState>();
         var B_State = GetSingleton<BoardState>();
 
-        if (G_State.IsActive==false)
+        if (G_State.IsActive == false)
         {
             return;
         }
@@ -57,7 +57,7 @@ public class BoardMan : ComponentSystem
             return;
         }
 
-        if ( ! (GridEntity.CalculateLength() > 0) )
+        if (!(GridEntity.CalculateLength() > 0))
         {
             return;
         }
@@ -73,35 +73,6 @@ public class BoardMan : ComponentSystem
             SetSingleton<BoardState>(B_State);
         }
 
-        //AIのターン中は操作を受け付けません。
-        if(G_State.AIColor!=G_State.NowTurn)
-        {
-            //設置するグリッドが確定した際にTrueになります
-            bool PutConfirm = false;
-
-            //プレイヤー側の入力受付
-            //後日別システムとして独立させます
-            Entities.With(GridEntity).ForEach((Entity EntityData, ref PointerInteraction GridClickData, ref GridComp GridData) =>
-            {
-                if (PutConfirm==false && GridClickData.clicked == true)
-                {
-
-                    if (CheckGridData(GridData.GridNum, ref GridDatas))
-                    {
-                        return;
-                    }
-
-
-                    if (GridData.GridState == 3)
-                    {
-                        //設置フラグを立てます
-                        GridData.PutFlag = true;
-                        PutConfirm = true;
-                    }
-                }
-            });
-
-        }
 
         Entities.With(GridEntity).ForEach((Entity EntityData, ref GridComp GridData) =>
         {

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3296673F-FF30-99D2-E661-E7AF5858112B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>Reversi</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="**\*.cs" Exclude="bee?\**\*.*" />
+    <None Include="Reversi.asmdef" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'windows-il2cpp-release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Library\DotsRuntimeBuild\artifacts\Reversi.dll\windows-il2cpp-release</OutputPath>
+    <DefineConstants>UNITY_2018_3_OR_NEWER;UNITY_DOTSPLAYER;UNITY_ZEROPLAYER;NET_TINY;NET_DOTS;UNITY_USE_TINYMATH;UNITY_BINDGEM;UNITY_AVOID_REFLECTION;UNITY_WINDOWS;UNITY_SINGLETHREADED_JOBS;UNITY_DOTSPLAYER_IL2CPP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <NoWarn></NoWarn>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>true</Prefer32Bit>
+    <StartAction>Program</StartAction>
+    <StartProgram>F:\Git\h5g-Reversi_AI\Library\DotsRuntimeBuild\build\Reversi\Reversi-windows-il2cpp-release\Reversi.exe</StartProgram>
+    <StartArguments />
+    <StartWorkingDirectory>F:\Git\h5g-Reversi_AI\Library\DotsRuntimeBuild\build\Reversi\Reversi-windows-il2cpp-release</StartWorkingDirectory>
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <RuntimeMetadataVersion>v4.0.30319</RuntimeMetadataVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <BEE_USE_EMPTY_BUILD>false</BEE_USE_EMPTY_BUILD>
+    <BEEBUILDCOMMAND>"F:\Git\h5g-Reversi_AI\Library\PackageCache\com.unity.tiny@0.16.1-preview\DotsPlayer\bee~\bee.exe" --no-colors build/Reversi/Reversi-windows-il2cpp-release/Reversi.exe</BEEBUILDCOMMAND>
+    <BEEBUILDWORKINGDIR>F:\Git\h5g-Reversi_AI\Library\DotsRuntimeBuild</BEEBUILDWORKINGDIR>
+    <BEEOUTPUTDIRECTORY>artifacts\Reversi.dll\windows-il2cpp-release</BEEOUTPUTDIRECTORY>
+    <IntermediateOutputPath>..\..\Library\DotsRuntimeBuild\artifacts\Bee.CSharpSupport\MSBuildIntermediateOutputPath\windows-il2cpp-release</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'windows-il2cpp-release|AnyCPU' ">
+    <Reference Include="12751576786183753200">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.ZeroJobs.dll\windows-il2cpp-release\ref\Unity.ZeroJobs.dll\12751576786183753200.dll</HintPath>
+    </Reference>
+    <Reference Include="13774144613829891508">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.LowLevel.dll\windows-il2cpp-release\ref\Unity.LowLevel.dll\13774144613829891508.dll</HintPath>
+    </Reference>
+    <Reference Include="18036157088576013510">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Collections.dll\windows-il2cpp-release\ref\Unity.Collections.dll\18036157088576013510.dll</HintPath>
+    </Reference>
+    <Reference Include="1821746317236505366">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Entities.dll\windows-il2cpp-release\ref\Unity.Entities.dll\1821746317236505366.dll</HintPath>
+    </Reference>
+    <Reference Include="5701907367483061622">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Mathematics.dll\windows-il2cpp-release\ref\Unity.Mathematics.dll\5701907367483061622.dll</HintPath>
+    </Reference>
+    <Reference Include="4717096081204118756">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Audio.dll\windows-il2cpp-release\ref\Unity.Tiny.Audio.dll\4717096081204118756.dll</HintPath>
+    </Reference>
+    <Reference Include="13851634889749526674">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.AudioNative.dll\windows-il2cpp-release\ref\Unity.Tiny.AudioNative.dll\13851634889749526674.dll</HintPath>
+    </Reference>
+    <Reference Include="1513611669363638790">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Core.dll\windows-il2cpp-release\ref\Unity.Tiny.Core.dll\1513611669363638790.dll</HintPath>
+    </Reference>
+    <Reference Include="13751214752618438054">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Core2D.dll\windows-il2cpp-release\ref\Unity.Tiny.Core2D.dll\13751214752618438054.dll</HintPath>
+    </Reference>
+    <Reference Include="339016302893956584">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Core2DTypes.dll\windows-il2cpp-release\ref\Unity.Tiny.Core2DTypes.dll\339016302893956584.dll</HintPath>
+    </Reference>
+    <Reference Include="3499678647234198390">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.EntryPoint.exe\windows-il2cpp-release\ref\Unity.Tiny.EntryPoint.exe\3499678647234198390.dll</HintPath>
+    </Reference>
+    <Reference Include="7063437032884939446">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.GLFW.dll\windows-il2cpp-release\ref\Unity.Tiny.GLFW.dll\7063437032884939446.dll</HintPath>
+    </Reference>
+    <Reference Include="3838813803413014198">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.HitBox2D.dll\windows-il2cpp-release\ref\Unity.Tiny.HitBox2D.dll\3838813803413014198.dll</HintPath>
+    </Reference>
+    <Reference Include="7313784070012692882">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Image2D.dll\windows-il2cpp-release\ref\Unity.Tiny.Image2D.dll\7313784070012692882.dll</HintPath>
+    </Reference>
+    <Reference Include="2440760413561662134">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Image2DIOSTB.dll\windows-il2cpp-release\ref\Unity.Tiny.Image2DIOSTB.dll\2440760413561662134.dll</HintPath>
+    </Reference>
+    <Reference Include="4218314540490204716">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Input.dll\windows-il2cpp-release\ref\Unity.Tiny.Input.dll\4218314540490204716.dll</HintPath>
+    </Reference>
+    <Reference Include="10354236061787748792">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.InputGLFW.dll\windows-il2cpp-release\ref\Unity.Tiny.InputGLFW.dll\10354236061787748792.dll</HintPath>
+    </Reference>
+    <Reference Include="14154378230670495062">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.IO.dll\windows-il2cpp-release\ref\Unity.Tiny.IO.dll\14154378230670495062.dll</HintPath>
+    </Reference>
+    <Reference Include="6773102853728968242">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Particles.dll\windows-il2cpp-release\ref\Unity.Tiny.Particles.dll\6773102853728968242.dll</HintPath>
+    </Reference>
+    <Reference Include="9915937055232318902">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.PointQuery.dll\windows-il2cpp-release\ref\Unity.Tiny.PointQuery.dll\9915937055232318902.dll</HintPath>
+    </Reference>
+    <Reference Include="944166433318457798">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Renderer.dll\windows-il2cpp-release\ref\Unity.Tiny.Renderer.dll\944166433318457798.dll</HintPath>
+    </Reference>
+    <Reference Include="3787988340720275382">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.RendererGL.dll\windows-il2cpp-release\ref\Unity.Tiny.RendererGL.dll\3787988340720275382.dll</HintPath>
+    </Reference>
+    <Reference Include="12883426636379623814">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.RendererGLNative.dll\windows-il2cpp-release\ref\Unity.Tiny.RendererGLNative.dll\12883426636379623814.dll</HintPath>
+    </Reference>
+    <Reference Include="10902122849892330694">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Scenes.dll\windows-il2cpp-release\ref\Unity.Tiny.Scenes.dll\10902122849892330694.dll</HintPath>
+    </Reference>
+    <Reference Include="549443565000047110">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Sprite2D.dll\windows-il2cpp-release\ref\Unity.Tiny.Sprite2D.dll\549443565000047110.dll</HintPath>
+    </Reference>
+    <Reference Include="13026380951193521766">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Text.dll\windows-il2cpp-release\ref\Unity.Tiny.Text.dll\13026380951193521766.dll</HintPath>
+    </Reference>
+    <Reference Include="17166138645636977526">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Tweens.dll\windows-il2cpp-release\ref\Unity.Tiny.Tweens.dll\17166138645636977526.dll</HintPath>
+    </Reference>
+    <Reference Include="10735622819221059478">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.UIControls.dll\windows-il2cpp-release\ref\Unity.Tiny.UIControls.dll\10735622819221059478.dll</HintPath>
+    </Reference>
+    <Reference Include="955797426881687030">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.UILayout.dll\windows-il2cpp-release\ref\Unity.Tiny.UILayout.dll\955797426881687030.dll</HintPath>
+    </Reference>
+    <Reference Include="334539999538013190">
+      <HintPath>..\..\Library\DotsRuntimeBuild\artifacts\Unity.Tiny.Watchers.dll\windows-il2cpp-release\ref\Unity.Tiny.Watchers.dll\334539999538013190.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\..\Library\DotsRuntimeBuild\Unity.TinyCorlib.csproj">
+      <Project>{95BE9475-7513-1D77-602F-DE1C691BFC25}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <Target Name="Build" Outputs="$(BEEOUTPUTDIRECTORY)" DependsOnTargets="">
+    <Exec Command="$(BEEBUILDCOMMAND)" WorkingDirectory="$(BEEBUILDWORKINGDIR)" Condition=" '$(BEE_USE_EMPTY_BUILD)' == 'false' " />
+  </Target>
+</Project>

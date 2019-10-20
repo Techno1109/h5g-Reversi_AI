@@ -1,5 +1,5 @@
 {
-    "name": "Reversi_AI",
+    "name": "Reversi",
     "references": [
         "Unity.Collections",
         "Unity.Entities",
@@ -34,8 +34,9 @@
         "Unity.Tiny.TextHTML",
         "Unity.Tiny.Tweens",
         "Unity.Tiny.UIControls",
-        "Unity.Tiny.UILayout"
-      ],
+        "Unity.Tiny.UILayout",
+        "Unity.Tiny.Watchers"
+    ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],

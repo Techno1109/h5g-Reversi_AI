@@ -6,8 +6,8 @@
     "Entities": [{
         "Components": [{
             "$type": "Unity.Entities.EntityGuid, Unity.Entities",
-            "a": 17651421187247326201,
-            "b": 11932440660965836962
+            "a": 6861088502551167871,
+            "b": 13055215190749824483
         }, {
             "$type": "Unity.Tiny.Core2D.DisplayInfo, Unity.Tiny.Core2D",
             "width": 1280,
@@ -19,10 +19,6 @@
             "$type": "Unity.Tiny.Scenes.Scenes, Unity.Tiny.Scenes",
             "Elements": [{
                 "SceneReference": {
-                    "SceneGuid": "ff069a69d57a4a248efb8f4bfba5e5e8"
-                }
-            }, {
-                "SceneReference": {
                     "SceneGuid": "c70740b63379442385c21097aba9a59a"
                 }
             }]
@@ -30,7 +26,7 @@
             "$type": "Unity.Tiny.Scenes.StartupScenes, Unity.Tiny.Scenes",
             "Elements": [{
                 "SceneReference": {
-                    "SceneGuid": "ff069a69d57a4a248efb8f4bfba5e5e8"
+                    "SceneGuid": "c70740b63379442385c21097aba9a59a"
                 }
             }]
         }, {
