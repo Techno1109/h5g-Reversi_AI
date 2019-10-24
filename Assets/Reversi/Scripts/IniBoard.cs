@@ -87,10 +87,11 @@ public class IniBoard : ComponentSystem
         SetSingleton<BoardState>(Config);
 
         var State = GetSingleton<GameState>();
-        State.IsActive = true;
-        State.NowTurn = 1;
+        State.IsActive = false;
+        State.NowTurn = -1;
         State.GameEnd = false;
         State.WinnetNum = 0;
+        State.AIColor = 0;
         SetSingleton<GameState>(State);
 
         EntityManager.World.GetExistingSystem<BoardMan>().RefreshBoardColor();

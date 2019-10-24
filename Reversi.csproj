@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5E37DB10-AAAA-BBBF-BC44-BB1FB868BA8E}</ProjectGuid>
+    <ProjectGuid>{51CC4921-46F0-AB6B-C240-D65C4FBD99CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Reversi</AssemblyName>
@@ -65,10 +65,12 @@
     <Compile Include="Assets\Reversi\Compornent\GridComp.cs" />
     <Compile Include="Assets\Reversi\Compornent\TurnTexts.cs" />
     <Compile Include="Assets\Reversi\Compornent\WinnerTexts.cs" />
+    <Compile Include="Assets\Reversi\Scripts\AiSystem.cs" />
     <Compile Include="Assets\Reversi\Scripts\AssemblyInfo.cs" />
     <Compile Include="Assets\Reversi\Scripts\BoardMan.cs" />
     <Compile Include="Assets\Reversi\Scripts\HudMan.cs" />
     <Compile Include="Assets\Reversi\Scripts\IniBoard.cs" />
+    <Compile Include="Assets\Reversi\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Reversi\Tags\ActiveDelete.cs" />
     <Compile Include="Assets\Reversi\Tags\BlackTag.cs" />
     <Compile Include="Assets\Reversi\Tags\GameEndWindowTag.cs" />
@@ -76,95 +78,97 @@
     <Compile Include="Assets\Reversi\Tags\NowTurnTag.cs" />
     <Compile Include="Assets\Reversi\Tags\ReplayButton.cs" />
     <Compile Include="Assets\Reversi\Tags\TestButton.cs" />
+    <Compile Include="Assets\Reversi\Tags\TurnSelectButtonTag.cs" />
+    <Compile Include="Assets\Reversi\Tags\TurnSelectWindowTag.cs" />
     <Compile Include="Assets\Reversi\Tags\WhiteTag.cs" />
     <Compile Include="Assets\Reversi\Tags\WinnerBgTag.cs" />
     <Compile Include="Assets\Reversi\Tags\WinnerTextTag.cs" />
     <Reference Include="Unity.Collections">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Entities">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Audio">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Audio.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Audio.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.AudioNative">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.AudioNative.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.AudioNative.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Core">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Core.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Core2D">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Core2D.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Core2D.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Core2DTypes">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Core2DTypes.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Core2DTypes.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.GLFW">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.GLFW.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.GLFW.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.HitBox2D">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.HitBox2D.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.HitBox2D.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Image2D">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Image2D.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Image2D.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Image2DIOSTB">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Image2DIOSTB.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Image2DIOSTB.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Input">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Input.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Input.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.InputGLFW">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.InputGLFW.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.InputGLFW.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.IO">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.IO.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.IO.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Particles">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Particles.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Particles.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.PointQuery">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.PointQuery.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.PointQuery.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Renderer">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Renderer.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Renderer.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.RendererGL">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.RendererGL.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.RendererGL.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.RendererGLNative">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.RendererGLNative.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.RendererGLNative.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Scenes">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Scenes.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Scenes.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Sprite2D">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Sprite2D.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Sprite2D.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Text">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Text.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Text.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Tweens">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Tweens.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Tweens.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.UIControls">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.UIControls.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.UIControls.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.UILayout">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.UILayout.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.UILayout.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Tiny.Watchers">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/Unity.Tiny.Watchers.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/Unity.Tiny.Watchers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:/Git/h5g-Reversi/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Users/keigo/Downloads/Desktop/Unity/2019.2.0b7/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -353,10 +357,10 @@
       <HintPath>C:/Users/keigo/Downloads/Desktop/Unity/2019.2.0b7/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>F:/Git/h5g-Reversi/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-      <HintPath>F:/Git/h5g-Reversi/Library/PackageCache/com.unity.collections@0.0.9-preview.20/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <HintPath>F:/Git/h5g-Reversi_AI/Library/PackageCache/com.unity.collections@0.0.9-preview.20/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Users/keigo/Downloads/Desktop/Unity/2019.2.0b7/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

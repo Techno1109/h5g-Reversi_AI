@@ -34,6 +34,12 @@ public class HudMan : ComponentSystem
     EntityQueryDesc BlackCountTextDesc;
     EntityQuery BlackCountTextEntity;
 
+    EntityQueryDesc TurnButtonDesc;
+    EntityQuery TurnButtonEntity;
+
+    EntityQueryDesc TurnWindowDesc;
+    EntityQuery TurnWindowEntity;
+
     protected override void OnCreate()
     {
         /*ECSにおいて、クエリの作成はOnCreateで行うのが定石となっています*/
@@ -79,6 +85,16 @@ public class HudMan : ComponentSystem
             All = new ComponentType[] { typeof(RectTransform), typeof(TextString), typeof(BlackTag), typeof(Text2DStyle) },
         };
 
+        TurnButtonDesc = new EntityQueryDesc()
+        {
+            All = new ComponentType[] { typeof(RectTransform), typeof(Sprite2DRenderer), typeof(PointerInteraction), typeof(Button), typeof(TurnSelectButtonTag) },
+        };
+
+        TurnWindowDesc = new EntityQueryDesc()
+        {
+            All = new ComponentType[] { typeof(RectTransform), typeof(TurnSelectWindowTag) },
+        };
+
         /*GetEntityQueryで取得した結果は自動的に開放されるため、Freeを行う処理を書かなくていいです。*/
         //作成したクエリの結果を取得します。
         GameEndWindowEntity = GetEntityQuery(GameEndWindowDesc);
@@ -89,6 +105,9 @@ public class HudMan : ComponentSystem
         ReplayButtonEntity = GetEntityQuery(ReplayButtonDesc);
         WhiteCountTextEntity = GetEntityQuery(WhiteCountTextDesc);
         BlackCountTextEntity = GetEntityQuery(BlackCountTextDesc);
+
+        TurnWindowEntity = GetEntityQuery(TurnWindowDesc);
+        TurnButtonEntity = GetEntityQuery(TurnButtonDesc);
     }
 
     protected override void OnUpdate()
@@ -119,7 +138,7 @@ public class HudMan : ComponentSystem
             Sprite2D.color = G_State.NowTurn == 1 ? White : Black;
         });
 
-        if (G_State.GameEnd == true)
+        if (G_State.GameEnd == true && G_State.IsActive == false)
         {
             bool PushFlag = false;
 
@@ -155,7 +174,43 @@ public class HudMan : ComponentSystem
                 Sprite2D.color = G_State.WinnetNum == 1 ? Black : White;
             });
         }
+
+
+        if (G_State.GameEnd == false && G_State.IsActive == false)
+        {
+            //プレイヤーターンセレクト用
+
+            bool PushFlag = false;
+            int PushCol = 0;
+            Entities.With(TurnButtonEntity).ForEach((ref TurnSelectButtonTag ButtonData,ref PointerInteraction GridClickData) =>
+            {
+                PushFlag = GridClickData.clicked;
+                PushCol = ButtonData.Color;
+            });
+
+            Entities.With(TurnWindowEntity).ForEach((ref RectTransform RectT) =>
+            {
+                //描画位置
+                if (PushFlag == false)
+                {
+                    RectT.anchoredPosition = new float2(0, 0);
+                }
+                else
+                {
+                    RectT.anchoredPosition = new float2(0, 1000);
+                    G_State.IsActive = true;
+                    G_State.NowTurn = 1;
+                    G_State.AIColor = PushCol;
+                    SetSingleton<GameState>(G_State);
+                }
+
+            });
+        }
+
+        if (G_State.GameEnd == false && G_State.IsActive == true)
+        {
             DrawCount(B_State.WhiteCount, B_State.BlackCount);
+        }
     }
 
     public void DrawCount(int WhiteCount,int BlackCount)

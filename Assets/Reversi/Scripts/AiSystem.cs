@@ -88,7 +88,31 @@ public class AiSystem : ComponentSystem
 
                 Reverse(GridData.GridNum, G_State.AIColor, ref GridDatas);
 
-                int ThisPriority = GetTotalPriority(G_State.AIColor, ref GridDatas);
+                var GameState = G_State;
+
+                CheckCanPut_AllGrid(ref GameState, ref GridDatas);
+
+
+
+                int ThisPriority = -999999;
+
+                for (int Count=0;Count<GridDatas.Length; Count++)
+                {
+                    NativeArray<GridComp> NextGridCompDatas=new NativeArray<GridComp>(GridDatas, Allocator.Temp);
+
+                    SetGridData(GridDatas[Count].GridNum, G_State.AIColor, ref NextGridCompDatas);
+
+                    Reverse(GridDatas[Count].GridNum, G_State.AIColor, ref NextGridCompDatas);
+
+                    int Priority= GetTotalPriority(G_State.AIColor, ref NextGridCompDatas); 
+                    if (Priority>ThisPriority)
+                    {
+                        ThisPriority = Priority;
+                    }
+
+                    NextGridCompDatas.Dispose();
+                }
+
                 if (ThisPriority> TopPriorityPoint)
                 {
                     TopPriorityPoint = ThisPriority;
@@ -204,46 +228,16 @@ public class AiSystem : ComponentSystem
     //クリックされた場所に駒を設置できるかどうか返します
     public bool CheckCanPut(int2 SetPos, int SetState, ref NativeArray<GridComp> GridDatas)
     {
-        //１方向でも設置できればOK
-        //上
-        if (CheckPinch(SetPos, new int2(0, 1), SetState, 0, ref GridDatas))
+
+        for(int x=-1;x<2;x++)
         {
-            return true;
-        }
-        //下
-        if (CheckPinch(SetPos, new int2(0, -1), SetState, 0, ref GridDatas))
-        {
-            return true;
-        }
-        //左
-        if (CheckPinch(SetPos, new int2(-1, 0), SetState, 0, ref GridDatas))
-        {
-            return true;
-        }
-        //右
-        if (CheckPinch(SetPos, new int2(1, 0), SetState, 0, ref GridDatas))
-        {
-            return true;
-        }
-        //右上
-        if (CheckPinch(SetPos, new int2(1, 1), SetState, 0, ref GridDatas))
-        {
-            return true;
-        }
-        //右下
-        if (CheckPinch(SetPos, new int2(1, -1), SetState, 0, ref GridDatas))
-        {
-            return true;
-        }
-        //左上
-        if (CheckPinch(SetPos, new int2(-1, 1), SetState, 0, ref GridDatas))
-        {
-            return true;
-        }
-        //左下
-        if (CheckPinch(SetPos, new int2(-1, -1), SetState, 0, ref GridDatas))
-        {
-            return true;
+            for (int y = -1; y < 2; y++)
+            {
+                if (CheckPinch(SetPos, new int2(x,y), SetState, 0, ref GridDatas))
+                {
+                    return true;
+                }
+            }
         }
 
         return false;
@@ -284,29 +278,15 @@ public class AiSystem : ComponentSystem
     //挟んだ駒を反転します
     public void Reverse(int2 SetPos, int SetState, ref NativeArray<GridComp> GridDatas)
     {
-        //上
-        CheckReverseState(SetPos, new int2(0, 1), SetState, 0, ref GridDatas);
 
-        //下
-        CheckReverseState(SetPos, new int2(0, -1), SetState, 0, ref GridDatas);
+        for (int x = 0; x < BoardSize; x++)
+        {
+            for (int y = 0; y < BoardSize; y++)
+            {
+                CheckReverseState(SetPos, new int2(x, y), SetState, 0, ref GridDatas);
+            }
+        }
 
-        //左
-        CheckReverseState(SetPos, new int2(-1, 0), SetState, 0, ref GridDatas);
-
-        //右
-        CheckReverseState(SetPos, new int2(1, 0), SetState, 0, ref GridDatas);
-
-        //右上
-        CheckReverseState(SetPos, new int2(1, 1), SetState, 0, ref GridDatas);
-
-        //右下
-        CheckReverseState(SetPos, new int2(1, -1), SetState, 0, ref GridDatas);
-
-        //左上
-        CheckReverseState(SetPos, new int2(-1, 1), SetState, 0, ref GridDatas);
-
-        //左下
-        CheckReverseState(SetPos, new int2(-1, -1), SetState, 0, ref GridDatas);
     }
 
     //指定ベクトル方向に挟めているのかチェックする
