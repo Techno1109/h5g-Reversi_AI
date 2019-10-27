@@ -17,4 +17,7 @@ public struct GameState : IComponentData
 
     //AIがどちらの色なのか格納します 0=未確定　1=黒 2=白
     public int AIColor;
+
+    //AIの待機カウンター
+    public float AiWaitCount;
 }

@@ -71,6 +71,18 @@ public class AiSystem : ComponentSystem
             return;
         }
 
+        G_State.AiWaitCount += World.TinyEnvironment().frameDeltaTime;
+        if(G_State.AiWaitCount<1.0f)
+        {
+            SetSingleton(G_State);
+            return;
+        }
+        else
+        {
+            G_State.AiWaitCount = 0;
+            SetSingleton(G_State);
+        }
+
         //ここから先で各盤面の評価値の取得、および判断を書いていきます。
         int2 PutPos = new int2(0, 0);
         int TopPriorityPoint = -999999;
@@ -90,32 +102,73 @@ public class AiSystem : ComponentSystem
 
                 var GameState = G_State;
 
+                GameState.NowTurn = GameState.NowTurn == 1 ? 2 : 1;
+
                 CheckCanPut_AllGrid(ref GameState, ref GridDatas);
 
 
 
-                int ThisPriority = -999999;
+                int FinalPriority = -999999;
 
+                //プレイヤー側予測
                 for (int Count=0;Count<GridDatas.Length; Count++)
                 {
-                    NativeArray<GridComp> NextGridCompDatas=new NativeArray<GridComp>(GridDatas, Allocator.Temp);
-
-                    SetGridData(GridDatas[Count].GridNum, G_State.AIColor, ref NextGridCompDatas);
-
-                    Reverse(GridDatas[Count].GridNum, G_State.AIColor, ref NextGridCompDatas);
-
-                    int Priority= GetTotalPriority(G_State.AIColor, ref NextGridCompDatas); 
-                    if (Priority>ThisPriority)
+                    if (GridDatas[Count].GridState==3)
                     {
-                        ThisPriority = Priority;
-                    }
+                        int SecondPriority = 999999;
+                        int2 SecondPriorityGrid = new int2(0, 0);
 
-                    NextGridCompDatas.Dispose();
+                        NativeArray<GridComp> SecondGridCompDatas = new NativeArray<GridComp>(GridDatas, Allocator.Temp);
+
+                        SetGridData(SecondGridCompDatas[Count].GridNum, GameState.AIColor, ref SecondGridCompDatas);
+
+                        Reverse(SecondGridCompDatas[Count].GridNum, GameState.AIColor, ref SecondGridCompDatas);
+
+                        int Priority = GetTotalPriority(GameState.AIColor, ref SecondGridCompDatas);
+                        //一番評価値が低い＝プレイヤーにとっての最善手
+                        if (Priority < SecondPriority)
+                        {
+                            SecondPriority = Priority;
+                            SecondPriorityGrid = GridDatas[Count].GridNum;
+                        }
+
+                        SecondGridCompDatas.Dispose();
+
+                        NativeArray<GridComp> ThirdGridCompDatas = new NativeArray<GridComp>(GridDatas, Allocator.Temp);
+
+                        SetGridData(SecondPriorityGrid, GameState.NowTurn, ref ThirdGridCompDatas);
+                        Reverse(SecondPriorityGrid, GameState.NowTurn, ref ThirdGridCompDatas);
+                        GameState.NowTurn = GameState.NowTurn == 1 ? 2 : 1;
+                        CheckCanPut_AllGrid(ref GameState, ref GridDatas);
+
+                        //二回目の手番予測
+                        NativeArray<GridComp> FinalGridCompDatas = new NativeArray<GridComp>(ThirdGridCompDatas, Allocator.Temp);
+                        for (int FinalCheckCount = 0; FinalCheckCount < FinalGridCompDatas.Length; FinalCheckCount++)
+                        {
+                            if (FinalGridCompDatas[Count].GridState == 3)
+                            {
+                                SetGridData(FinalGridCompDatas[Count].GridNum, GameState.AIColor, ref FinalGridCompDatas);
+
+                                Reverse(FinalGridCompDatas[Count].GridNum, GameState.AIColor, ref FinalGridCompDatas);
+
+                                int FinalCheckPriority = GetTotalPriority(GameState.AIColor, ref FinalGridCompDatas);
+                                //一番評価値が低い＝プレイヤーにとっての最善手
+                                if (FinalCheckPriority > FinalPriority)
+                                {
+                                    FinalPriority = FinalCheckPriority;
+                                }
+                            }
+                        }
+
+
+                        ThirdGridCompDatas.Dispose();
+                        FinalGridCompDatas.Dispose();
+                    }
                 }
 
-                if (ThisPriority> TopPriorityPoint)
+                if (FinalPriority> TopPriorityPoint)
                 {
-                    TopPriorityPoint = ThisPriority;
+                    TopPriorityPoint = FinalPriority;
                     PutPos = GridData.GridNum;
                 }
 
@@ -132,6 +185,7 @@ public class AiSystem : ComponentSystem
                 GridData.PutFlag = true;
             }
         });
+
     }
 
 

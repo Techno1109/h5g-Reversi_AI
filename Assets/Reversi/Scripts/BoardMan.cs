@@ -200,48 +200,18 @@ public class BoardMan : ComponentSystem
     //クリックされた場所に駒を設置できるかどうか返します
     public bool CheckCanPut(int2 SetPos,int SetState ,ref NativeArray<Entity> Entities)
     {
-        //１方向でも設置できればOK
-        //上
-        if(CheckPinch(SetPos,new int2(0,1), SetState, 0, ref Entities))
+        for (int x = -1; x < 2; x++)
         {
-            return true;
+            for (int y = -1; y < 2; y++)
+            {
+                //上
+                if (CheckPinch(SetPos, new int2(x, y), SetState, 0, ref Entities))
+                {
+                    return true;
+                }
+            }
         }
-        //下
-        if (CheckPinch(SetPos, new int2(0, -1), SetState, 0, ref Entities))
-        {
-            return true;
-        }
-        //左
-        if (CheckPinch(SetPos, new int2(-1, 0), SetState, 0, ref Entities))
-        {
-            return true;
-        }
-        //右
-        if (CheckPinch(SetPos, new int2(1, 0), SetState, 0, ref Entities))
-        {
-            return true;
-        }
-        //右上
-        if (CheckPinch(SetPos, new int2(1, 1), SetState, 0, ref Entities))
-        {
-            return true;
-        }
-        //右下
-        if (CheckPinch(SetPos, new int2(1, -1), SetState, 0, ref Entities))
-        {
-            return true;
-        }
-        //左上
-        if (CheckPinch(SetPos, new int2(-1, 1), SetState, 0, ref Entities))
-        {
-            return true;
-        }
-        //左下
-        if (CheckPinch(SetPos, new int2(-1, -1), SetState, 0, ref Entities))
-        {
-            return true;
-        }
-
+ 
         return false;
     }
 
@@ -281,29 +251,14 @@ public class BoardMan : ComponentSystem
     //挟んだ駒を反転します
     public void Reverse(int2 SetPos, int SetState, ref NativeArray<Entity> Entities)
     {
-        //上
-        CheckReverseState(SetPos, new int2(0, 1), SetState, 0, ref Entities);
 
-        //下
-        CheckReverseState(SetPos, new int2(0, -1), SetState, 0, ref Entities);
-
-        //左
-        CheckReverseState(SetPos, new int2(-1, 0), SetState, 0, ref Entities);
-
-        //右
-        CheckReverseState(SetPos, new int2(1, 0), SetState, 0, ref Entities);
-
-        //右上
-        CheckReverseState(SetPos, new int2(1, 1), SetState, 0, ref Entities);
-
-        //右下
-        CheckReverseState(SetPos, new int2(1, -1), SetState, 0, ref Entities);
-
-        //左上
-        CheckReverseState(SetPos, new int2(-1, 1), SetState, 0, ref Entities);
-
-        //左下
-        CheckReverseState(SetPos, new int2(-1, -1), SetState, 0, ref Entities);
+        for (int x = -1; x < 2; x++)
+        {
+            for (int y = -1; y < 2; y++)
+            {
+                CheckReverseState(SetPos, new int2(x, y), SetState, 0, ref Entities);
+            }
+        }
     }
 
     //指定ベクトル方向に挟めているのかチェックする
@@ -423,21 +378,34 @@ public class BoardMan : ComponentSystem
 
         Color CanPut = new Color(0.874f, 0.2264659f, 0.140714f);
 
+        var G_State = GetSingleton<GameState>();
+        var B_State = GetSingleton<BoardState>();
+
         Entities.With(GridEntity).ForEach((Entity EntityData, ref Sprite2DRenderer Sprite2D, ref GridComp GridData) =>
         {
+            //設置可能マスの場合
+            if (GridData.GridState == 3 )
+            {
+                if (G_State.NowTurn != G_State.AIColor)
+                {
+                    Sprite2D.color = CanPut;
+                }
+                else
+                {
+                    int ColBaseNum = GridData.GridNum.y % 2 == 0 ? 0 : 1;
+
+                    Sprite2D.color = (ColBaseNum + GridData.GridNum.x) % 2 > 0 ? TableColor_1 : TableColor_2;
+                }
+                return;
+            }
+
+
             //盤面に駒が何もなければそのグリッドに適したBoardの色を設定
             if (GridData.GridState==0)
             {
                 int ColBaseNum = GridData.GridNum.y % 2 == 0 ? 0 : 1;
 
                 Sprite2D.color = (ColBaseNum + GridData.GridNum.x) % 2 > 0 ? TableColor_1 : TableColor_2;
-                return;
-            }
-
-            //設置可能マスの場合
-            if(GridData.GridState==3)
-            {
-                Sprite2D.color = CanPut;
                 return;
             }
 
