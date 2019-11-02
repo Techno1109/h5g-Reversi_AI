@@ -184,8 +184,11 @@ public class HudMan : ComponentSystem
             int PushCol = 0;
             Entities.With(TurnButtonEntity).ForEach((ref TurnSelectButtonTag ButtonData,ref PointerInteraction GridClickData) =>
             {
-                PushFlag = GridClickData.clicked;
-                PushCol = ButtonData.Color;
+                PushFlag |= GridClickData.clicked;
+                if (GridClickData.clicked == true)
+                {
+                    PushCol = ButtonData.Color;
+                }
             });
 
             Entities.With(TurnWindowEntity).ForEach((ref RectTransform RectT) =>

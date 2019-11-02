@@ -386,7 +386,7 @@ public class BoardMan : ComponentSystem
             //設置可能マスの場合
             if (GridData.GridState == 3 )
             {
-                if (G_State.NowTurn != G_State.AIColor)
+                if (G_State.NowTurn == G_State.AIColor)
                 {
                     Sprite2D.color = CanPut;
                 }

@@ -102,27 +102,24 @@ public class AiSystem : ComponentSystem
 
                 var GameState = G_State;
 
-                GameState.NowTurn = GameState.NowTurn == 1 ? 2 : 1;
+                GameState.NowTurn = GameState.AIColor == 1 ? 2 : 1;
 
                 CheckCanPut_AllGrid(ref GameState, ref GridDatas);
 
 
 
                 int FinalPriority = -999999;
-
+                int SecondPriority = 999999;
+                int2 SecondPriorityGrid = new int2(0, 0);
                 //プレイヤー側予測
-                for (int Count=0;Count<GridDatas.Length; Count++)
+                for (int Count = 0; Count < GridDatas.Length; Count++)
                 {
-                    if (GridDatas[Count].GridState==3)
+                    if (GridDatas[Count].GridState == 3)
                     {
-                        int SecondPriority = 999999;
-                        int2 SecondPriorityGrid = new int2(0, 0);
-
                         NativeArray<GridComp> SecondGridCompDatas = new NativeArray<GridComp>(GridDatas, Allocator.Temp);
+                        SetGridData(SecondGridCompDatas[Count].GridNum, GameState.NowTurn, ref SecondGridCompDatas);
 
-                        SetGridData(SecondGridCompDatas[Count].GridNum, GameState.AIColor, ref SecondGridCompDatas);
-
-                        Reverse(SecondGridCompDatas[Count].GridNum, GameState.AIColor, ref SecondGridCompDatas);
+                        Reverse(SecondGridCompDatas[Count].GridNum, GameState.NowTurn, ref SecondGridCompDatas);
 
                         int Priority = GetTotalPriority(GameState.AIColor, ref SecondGridCompDatas);
                         //一番評価値が低い＝プレイヤーにとっての最善手
@@ -133,38 +130,36 @@ public class AiSystem : ComponentSystem
                         }
 
                         SecondGridCompDatas.Dispose();
-
-                        NativeArray<GridComp> ThirdGridCompDatas = new NativeArray<GridComp>(GridDatas, Allocator.Temp);
-
-                        SetGridData(SecondPriorityGrid, GameState.NowTurn, ref ThirdGridCompDatas);
-                        Reverse(SecondPriorityGrid, GameState.NowTurn, ref ThirdGridCompDatas);
-                        GameState.NowTurn = GameState.NowTurn == 1 ? 2 : 1;
-                        CheckCanPut_AllGrid(ref GameState, ref GridDatas);
-
-                        //二回目の手番予測
-                        NativeArray<GridComp> FinalGridCompDatas = new NativeArray<GridComp>(ThirdGridCompDatas, Allocator.Temp);
-                        for (int FinalCheckCount = 0; FinalCheckCount < FinalGridCompDatas.Length; FinalCheckCount++)
-                        {
-                            if (FinalGridCompDatas[Count].GridState == 3)
-                            {
-                                SetGridData(FinalGridCompDatas[Count].GridNum, GameState.AIColor, ref FinalGridCompDatas);
-
-                                Reverse(FinalGridCompDatas[Count].GridNum, GameState.AIColor, ref FinalGridCompDatas);
-
-                                int FinalCheckPriority = GetTotalPriority(GameState.AIColor, ref FinalGridCompDatas);
-                                //一番評価値が低い＝プレイヤーにとっての最善手
-                                if (FinalCheckPriority > FinalPriority)
-                                {
-                                    FinalPriority = FinalCheckPriority;
-                                }
-                            }
-                        }
-
-
-                        ThirdGridCompDatas.Dispose();
-                        FinalGridCompDatas.Dispose();
                     }
                 }
+                    NativeArray<GridComp> ThirdGridCompDatas = new NativeArray<GridComp>(GridDatas, Allocator.Temp);
+
+                    SetGridData(SecondPriorityGrid, GameState.NowTurn, ref ThirdGridCompDatas);
+                    Reverse(SecondPriorityGrid, GameState.NowTurn, ref ThirdGridCompDatas);
+                    GameState.NowTurn=GameState.AIColor;
+                    CheckCanPut_AllGrid(ref GameState, ref ThirdGridCompDatas);
+
+                    //二回目の手番予測
+                    for (int FinalCheckCount = 0; FinalCheckCount < ThirdGridCompDatas.Length; FinalCheckCount++)
+                    {
+                        if (ThirdGridCompDatas[FinalCheckCount].GridState == 3)
+                        {
+                        NativeArray<GridComp> FinalGridCompDatas = new NativeArray<GridComp>(ThirdGridCompDatas, Allocator.Temp);
+
+                        SetGridData(FinalGridCompDatas[FinalCheckCount].GridNum, GameState.AIColor, ref FinalGridCompDatas);
+
+                         Reverse(FinalGridCompDatas[FinalCheckCount].GridNum, GameState.AIColor, ref FinalGridCompDatas);
+
+                        int FinalCheckPriority = GetTotalPriority(GameState.AIColor, ref FinalGridCompDatas);
+
+                        if (FinalCheckPriority > FinalPriority)
+                        {
+                            FinalPriority = FinalCheckPriority;
+                        }
+                        FinalGridCompDatas.Dispose();
+                        }
+                    }
+                ThirdGridCompDatas.Dispose();
 
                 if (FinalPriority> TopPriorityPoint)
                 {
