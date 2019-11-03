@@ -156,7 +156,7 @@ public class HudMan : ComponentSystem
                 }
                 else
                 {
-                    RectT.anchoredPosition = new float2(0, 1000);
+                    RectT.anchoredPosition = new float2(0, 2000);
                     EntityManager.World.GetExistingSystem<IniBoard>().InitBoard();
                 }
 
@@ -200,7 +200,7 @@ public class HudMan : ComponentSystem
                 }
                 else
                 {
-                    RectT.anchoredPosition = new float2(0, 1000);
+                    RectT.anchoredPosition = new float2(0, 2000);
                     G_State.IsActive = true;
                     G_State.NowTurn = 1;
                     G_State.AIColor = PushCol;

@@ -91,6 +91,10 @@ public class AiSystem : ComponentSystem
         {
             if (GridData.GridState == 3)
             {
+                int FinalPriority = -999999;
+                int SecondPriority = 999999;
+                int2 SecondPriorityGrid = new int2(0, 0);
+
                 NativeArray<GridComp> GridDatas = new NativeArray<GridComp>(0, Allocator.Temp);
 
                 //åªç›ÇÃî’ñ ÇéÊìæ
@@ -104,13 +108,22 @@ public class AiSystem : ComponentSystem
 
                 GameState.NowTurn = GameState.AIColor == 1 ? 2 : 1;
 
-                CheckCanPut_AllGrid(ref GameState, ref GridDatas);
+                if(!CheckCanPut_AllGrid(ref GameState, ref GridDatas))
+                {
+                    FinalPriority= GetTotalPriority(GameState.AIColor, ref GridDatas);
+                    if (FinalPriority > TopPriorityPoint)
+                    {
+                        TopPriorityPoint = FinalPriority;
+                        PutPos = GridData.GridNum;
+                    }
+
+                    GridDatas.Dispose();
+
+                    return;
+                }
 
 
 
-                int FinalPriority = -999999;
-                int SecondPriority = 999999;
-                int2 SecondPriorityGrid = new int2(0, 0);
                 //ÉvÉåÉCÉÑÅ[ë§ó\ë™
                 for (int Count = 0; Count < GridDatas.Length; Count++)
                 {
@@ -137,7 +150,20 @@ public class AiSystem : ComponentSystem
                     SetGridData(SecondPriorityGrid, GameState.NowTurn, ref ThirdGridCompDatas);
                     Reverse(SecondPriorityGrid, GameState.NowTurn, ref ThirdGridCompDatas);
                     GameState.NowTurn=GameState.AIColor;
-                    CheckCanPut_AllGrid(ref GameState, ref ThirdGridCompDatas);
+
+                    if (!CheckCanPut_AllGrid(ref GameState, ref ThirdGridCompDatas))
+                    {
+                        FinalPriority = GetTotalPriority(GameState.AIColor, ref ThirdGridCompDatas);
+                        if (FinalPriority > TopPriorityPoint)
+                        {
+                            TopPriorityPoint = FinalPriority;
+                            PutPos = GridData.GridNum;
+                        }
+
+                        ThirdGridCompDatas.Dispose();
+                        GridDatas.Dispose();
+                        return;
+                    }
 
                     //ìÒâÒñ⁄ÇÃéËî‘ó\ë™
                     for (int FinalCheckCount = 0; FinalCheckCount < ThirdGridCompDatas.Length; FinalCheckCount++)

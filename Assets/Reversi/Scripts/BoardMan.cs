@@ -70,6 +70,8 @@ public class BoardMan : ComponentSystem
         {
             CheckCanPut_AllGrid(ref G_State, ref GridDatas);
             B_State.InitBoard = true;
+            RefreshBoardColor();
+            PawnCounter();
             SetSingleton<BoardState>(B_State);
         }
 
@@ -94,7 +96,7 @@ public class BoardMan : ComponentSystem
                 GridData.PutFlag = false;
 
                 SetSingleton<GameState>(G_State);
-
+                RefreshBoardColor();
                 PawnCounter();
             }
         });
@@ -243,7 +245,6 @@ public class BoardMan : ComponentSystem
                 }
             }
         }
-        RefreshBoardColor();
         //どこかに設置できる時点で次のターンは有効と考えられる。
         return CanPut;
     }
@@ -386,7 +387,7 @@ public class BoardMan : ComponentSystem
             //設置可能マスの場合
             if (GridData.GridState == 3 )
             {
-                if (G_State.NowTurn == G_State.AIColor)
+                if (G_State.NowTurn != G_State.AIColor)
                 {
                     Sprite2D.color = CanPut;
                 }

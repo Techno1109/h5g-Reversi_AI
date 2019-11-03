@@ -71,7 +71,9 @@
     <Compile Include="Assets\Reversi\Scripts\HudMan.cs" />
     <Compile Include="Assets\Reversi\Scripts\IniBoard.cs" />
     <Compile Include="Assets\Reversi\Scripts\PlayerInput.cs" />
+    <Compile Include="Assets\Reversi\Scripts\UiAspectManager.cs" />
     <Compile Include="Assets\Reversi\Tags\ActiveDelete.cs" />
+    <Compile Include="Assets\Reversi\Tags\AspectManageTarget.cs" />
     <Compile Include="Assets\Reversi\Tags\BlackTag.cs" />
     <Compile Include="Assets\Reversi\Tags\GameEndWindowTag.cs" />
     <Compile Include="Assets\Reversi\Tags\NowTurnBg.cs" />
